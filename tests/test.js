@@ -21,3 +21,20 @@ describe('Id Generation Module', function() {
     expect(service.generateId('a', 'b', undefined)).to.be.null;
   });
 });
+
+describe('Id parse module', function() {
+  it('should parse a valid id', function() {
+    var parsed = service.parseId('a_b_c');
+    expect(parsed.userId).to.equal('a');
+    expect(parsed.serviceName).to.equal('b');
+    expect(parsed.serviceId).to.equal('c');
+  });
+
+  it('should return null if not valid id', function(){
+    expect(service.parseId(null)).to.be.null;
+    expect(service.parseId(undefined)).to.be.null;
+    expect(service.parseId('abcd')).to.be.null;
+    expect(service.parseId('a_b')).to.be.null;
+    expect(service.parseId('a_b_c_d')).to.be.null;
+  });
+});
