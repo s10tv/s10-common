@@ -1,21 +1,21 @@
 {
-  "name": "qimingfang-idgenerator",
+  "name": "s10-common",
   "version": "0.0.1",
-  "description": "A common script that generates ids",
+  "description": "A common script",
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qimingfang/idgenerator.git"
+    "url": "git+https://github.com/s10tv/s10-common.git"
   },
   "author": "Qiming Fang",
   "license": "None",
   "bugs": {
-    "url": "https://github.com/qimingfang/idgenerator/issues"
+    "url": "https://github.com/s10tv/s10-common/issues"
   },
-  "homepage": "https://github.com/qimingfang/idgenerator#readme",
+  "homepage": "https://github.com/s10tv/s10-common#readme",
   "devDependencies": {
     "chai": "^3.0.0",
     "mocha": "^2.2.5"
