@@ -1,0 +1,23 @@
+{
+  "name": "qimingfang-idgenerator",
+  "version": "0.0.1",
+  "description": "A common script that generates ids",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qimingfang/idgenerator.git"
+  },
+  "author": "Qiming Fang",
+  "license": "None",
+  "bugs": {
+    "url": "https://github.com/qimingfang/idgenerator/issues"
+  },
+  "homepage": "https://github.com/qimingfang/idgenerator#readme",
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "mocha": "^2.2.5"
+  }
+}
