@@ -38,3 +38,21 @@ describe('Id parse module', function() {
     expect(service.parseId('a_b_c_d')).to.be.null;
   });
 });
+
+describe('nextTimestamp module', function() {
+  it('should give 6 pm of the current day if time < 3pm', function() {
+    // 25.11.2015 at 9am
+    var timeBefore6PM = new Date(1448470800000);
+    expect(service.nextTimestamp(timeBefore6PM).getDate()).to.equal(25)
+    expect(service.nextTimestamp(timeBefore6PM).getHours()).to.equal(18)
+    expect(service.nextTimestamp(timeBefore6PM).getMinutes()).to.equal(0)
+  });
+
+  it('should give 6 pm of the next day if time > 3pm', function () {
+    // 25.11.2015 at 7pm
+    var timeAfter6PM = new Date(1448506800000);
+    expect(service.nextTimestamp(timeAfter6PM).getDate()).to.equal(26)
+    expect(service.nextTimestamp(timeAfter6PM).getHours()).to.equal(18)
+    expect(service.nextTimestamp(timeAfter6PM).getMinutes()).to.equal(0)
+  });
+});
